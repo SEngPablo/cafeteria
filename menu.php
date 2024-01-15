@@ -8,7 +8,7 @@
 					<li class="sidebar-header">
 						Pages
 					</li>
-
+						
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="dashboard.php">
               <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
@@ -16,8 +16,8 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
-              <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+						<a class="sidebar-link" href="formcliente.php">
+              <i class="align-middle" data-feather="user"></i> 	<span class="align-middle">Clientes</span>
             </a>
 					</li>
 
@@ -34,7 +34,7 @@
 					</li>
 
 					<li class="sidebar-item active">
-						<a class="sidebar-link" href="pages-blank.html">
+						<a class="sidebar-link" href="dashboard.php">
               <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
             </a>
 					</li>
