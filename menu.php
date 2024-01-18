@@ -5,37 +5,39 @@
         </a>
 
 				<ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Pages
+					<li class="sidebar-header h2 bg-light border border-black">
+						Módulos
 					</li>
+					
+
 						
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="dashboard.php">
-              <i class="align-middle fa-solid fa-house"></i> <span class="align-middle">Dashboard</span>
+              <i class="align-middle fa-solid fa-house fa-xl"></i> <span class="align-middle">Dashboard</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="formcliente.php">
-              <i class="align-middle" data-feather="user"></i> 	<span class="align-middle">Clientes</span>
+              <i class="align-middle fa-regular fa-user fa-xl" ></i> 	<span class="align-middle">Clientes</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="formproduto.php">
-              <i class="align-middle bi bi-cup-hot-fill"></i> <span class="align-middle">Produtos</span>
+              <i class="align-middle fa-solid fa-mug-hot fa-xl"></i> <span class="align-middle">Produtos</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-sign-up.html">
-              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+						<a class="sidebar-link" href="formfornecedor.php">
+              <i class="align-middle fa-solid fa-dolly fa-xl"></i> <span class="align-middle">Fornecedor</span>
             </a>
 					</li>
 
-					<li class="sidebar-item active">
+					<li class="sidebar-item">
 						<a class="sidebar-link" href="dashboard.php">
-              <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+              <i class="align-middle fa-xl" data-feather="book"></i> <span class="align-middle">Blank</span>
             </a>
 					</li>
 

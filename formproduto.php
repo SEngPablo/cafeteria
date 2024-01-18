@@ -21,7 +21,8 @@
 
 					<div class="row">
 					<div class="mb-3 col-6">
-  <label for="produto" class="form-label">Produto</label>
+  <label for="produto" class="form-label">
+  Produto</label>
   <input type="text" class="form-control" id="produto" placeholder="Digite o nome do produto">
 </div>
 <div class="mb-3 col-6">
@@ -30,7 +31,7 @@
 </div>
 					</div>
 
-					<div class="mb-3 col-3">
+					<div class="mb-3">
 						<label for="categoria" class="form-label">Categoria dos produtos</label>
 						<select
 							class="form-select form-select-lg"
@@ -44,7 +45,11 @@
 							<option value="sanduicheesalgado">Sanduiche e Salgado</option>
 						</select>
 					</div>
-					
+
+					<div class="mb-3">
+						<label for="estoque" class="form-label">Estoque</label>
+						<input type="number" class="form-control" name="estoque" id="estoque" min="0" max="200" step="1">
+					</div>
 					
 				</div>
 <div style="text-align:center; justify-content:center; display: block; width:100%; margin-top: 10px;"><input type="submit" value="Enviar" class="btn btn-primary"></div>
