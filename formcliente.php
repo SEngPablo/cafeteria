@@ -240,8 +240,7 @@
 
 
 <script type="text/javascript">
-    $("
-#cpfcnpj").keydown(function () {
+    $("#cpfcnpj").keydown(function () {
         try {
             $("#cpfcnpj").unmask();
         } catch (e) { }
