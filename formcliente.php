@@ -14,7 +14,7 @@
         <?php include 'topo.php' ?>
 
 		<main class="content">
-			<form action="" method="post">
+			<form action="cadastrocliente.php" method="post" enctype="multipart/form-data">
 				<div class="container-fluid p-0">
 
 					<h1 class="h3 mb-3">Cadastro do cliente</h1>
@@ -154,11 +154,14 @@
 								placeholder="Insira sua imagem"
 							/>
 						</div>
-
+						<button
+					type="submit"
+					class="btn btn-primary"				>
+					Submit
+				</button>
 							
 				</div>
 
-				</form>
 			</main>
 
 <footer class="footer">
