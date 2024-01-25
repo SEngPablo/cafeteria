@@ -4,7 +4,8 @@ $hostname = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'cafeteria';
+$port = '3307';
 
-$conexao = mysqli_conect($hostname, $username, $password, $database);
+$conexao = mysqli_connect($hostname, $username, $password, $database, $port);
 
 ?>

@@ -31,7 +31,7 @@
 							/>
 						</div>
 						<div class="mb-3 col-6">
-							<label for="" class="form-label">Email</label>
+							<label for="email" class="form-label">Email</label>
 							<input
 								type="email"
 								class="form-control"
@@ -47,7 +47,7 @@
 
 					<div class="row">
 						<div class="mb-3 col-4">
-							<label for="" class="form-label">Telefone</label>
+							<label for="telefone" class="form-label">Telefone</label>
 							<input
 								type="text"
 								class="form-control"
@@ -154,15 +154,81 @@
 								placeholder="Insira sua imagem"
 							/>
 						</div>
-						<button
-					type="submit"
-					class="btn btn-primary"				>
-					Submit
-				</button>
-							
+						<button	type="submit" class="btn btn-primary">Enviar</button>	
 				</div>
-
+			</form>
 			</main>
+
+			<div class="main">
+				<div
+					class="table-responsive"
+				>
+					<table
+						class="table table-secondary table-striped"
+					>
+						<thead>
+							<tr>
+								<th scope="col">Foto</th>
+								<th scope="col">Nome</th>
+								<th scope="col">E-mail</th>
+								<th scope="col">Telefone</th>
+								<th scope="col">Estado</th>
+								<th scope="col">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php include 'conexao.php';
+
+							$sql = "SELECT * FROM clientes";
+							$busca = mysqli_query($conexao, $sql);
+
+							while ($dados = mysqli_fetch_array($busca)){
+
+								$imagem = $dados['imagem'];
+								$nome = $dados['nome'];
+								$email = $dados['email'];
+								$telefone = $dados['telefone'];
+								$uf = $dados['uf'];
+							
+							?>
+
+								<tr>
+									<td><img src="imagens/<?php echo $imagem ?>" width="100px" height="100%"></td>
+									<td><?php echo $nome ?></td>
+									<td><?php echo $email ?></td>
+									<td><?php echo $telefone ?></td>
+									<td><?php echo $uf ?></td>
+									<td></td>
+								</tr>
+
+							<?php } ?>
+
+
+
+							<tr class="">
+								<td scope="row">R1C1</td>
+								<td>R1C2</td>
+								<td>R1C3</td>	
+								<td>R1C3</td>
+								<td>R1C3</td>
+								<td></td>
+							</tr>
+							<tr class="">
+								<td scope="row">Item</td>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+								<td>Item</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div>
+
+
+
 
 <footer class="footer">
     <?php include 'footer.php' ?>

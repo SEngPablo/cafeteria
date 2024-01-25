@@ -1,6 +1,6 @@
 <?php 
 
-include 'conexao.php'
+include 'conexao.php';
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -24,13 +24,14 @@ if($arquivo !== null) {
         $caminho_arquivo = "imagens/".$nome_arquivo;
         move_uploaded_file($arquivo['tmp_name'],$caminho_arquivo);
 
-        $sql = "INSERT INTO `cliente`(`nome`, `email`, `telefone`, `cpfcnpj`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `uf`, `imagem`) VALUES ('$nome','$mail','$telefone','$cpfcnpj','$cep','$logradouro','$numero','$complemento','$bairro','$cidade','$uf','$nome_arquivo')";
+        $sql = "INSERT INTO `clientes`(`nome`, `email`, `telefone`, `cpfcnpj`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `uf`,`cep`, `imagem`) VALUES ('$nome','$email','$telefone','$cpfcnpj','$logradouro','$numero','$complemento','$bairro','$cidade','$uf', '$cep', '$nome_arquivo')";
 
         $inserir = mysqli_query($conexao,$sql);
+
 
     }
 }
 
-
+header('Location: formcliente.php');
 
 ?>
