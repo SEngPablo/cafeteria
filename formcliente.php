@@ -154,7 +154,7 @@
 								placeholder="Insira sua imagem"
 							/>
 						</div>
-						<button	type="submit" class="btn btn-primary">Enviar</button>	
+						<button	type="submit" class="btn btn-primary ">Enviar</button>	
 				</div>
 			</form>
 			</main>
@@ -164,10 +164,10 @@
 					class="table-responsive"
 				>
 					<table
-						class="table table-secondary table-striped"
+						class="table table-secondary table-hover"
 					>
 						<thead>
-							<tr>
+							<tr class="text-center">
 								<th scope="col">Foto</th>
 								<th scope="col">Nome</th>
 								<th scope="col">E-mail</th>
@@ -183,7 +183,7 @@
 							$busca = mysqli_query($conexao, $sql);
 
 							while ($dados = mysqli_fetch_array($busca)){
-
+								$idclientes = $dados['idclientes'];
 								$imagem = $dados['imagem'];
 								$nome = $dados['nome'];
 								$email = $dados['email'];
@@ -192,35 +192,131 @@
 							
 							?>
 
-								<tr>
-									<td><img src="imagens/<?php echo $imagem ?>" width="100px" height="100%"></td>
+								<tr class="text-center">
+									<td><img src="imagens/<?php echo $imagem ?>" width="100px" height="100%" class="rounded-circle"></td>
 									<td><?php echo $nome ?></td>
 									<td><?php echo $email ?></td>
 									<td><?php echo $telefone ?></td>
 									<td><?php echo $uf ?></td>
-									<td></td>
+									<td>
+												<!-- Modal trigger button -->
+												<button
+													type="button"
+													class="btn btn-warning btn-lg"
+													data-bs-toggle="modal"
+													data-bs-target="#modaleditar"
+												>
+												<i class="fa-solid fa-file-pen"></i>												</button>
+												
+												<!-- Modal Body -->
+												<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+												<div
+													class="modal fade"
+													id="modaleditar"
+													tabindex="-1"
+													data-bs-backdrop="static"
+													data-bs-keyboard="false"
+													
+													role="dialog"
+													aria-labelledby="modalTitleId"
+													aria-hidden="true"
+												>
+													<div
+														class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+														role="document"
+													>
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="modalTitleId">
+																	 <?php echo $idclientes ?>
+																</h5>
+																<button
+																	type="button"
+																	class="btn-close"
+																	data-bs-dismiss="modal"
+																	aria-label="Close"
+																></button>
+															</div>
+															<div class="modal-body">Body</div>
+															<div class="modal-footer">
+																<button
+																	type="button"
+																	class="btn btn-secondary"
+																	data-bs-dismiss="modal"
+																>
+																	Voltar
+																</button>
+																<button type="button" class="btn btn-primary">Salvar</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<!-- Modal trigger button -->
+												<button
+													type="button"
+													class="btn btn-danger btn-lg"
+													data-bs-toggle="modal"
+													data-bs-target="#modalexcluir"
+												>
+												<i class="fa-solid fa-trash-can"></i>													</button>
+												
+												<!-- Modal Body -->
+												<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+												<div
+													class="modal fade"
+													id="modalexcluir"
+													tabindex="-1"
+													data-bs-backdrop="static"
+													data-bs-keyboard="false"
+													
+													role="dialog"
+													aria-labelledby="modalTitleId"
+													aria-hidden="true"
+												>
+													<div
+														class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+														role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="modalTitleId">
+																	Excluir dados do cliente
+																</h5>
+																<button
+																	type="button"
+																	class="btn-close"
+																	data-bs-dismiss="modal"
+																	aria-label="Close"
+																></button>
+															</div>
+															<div class="modal-body">Deseja excluir todos os dados?</div>
+															<div class="modal-footer">
+																<button
+																	type="button"
+																	class="btn btn-secondary"
+																	data-bs-dismiss="modal"
+																>
+																	Voltar
+																</button>
+																<button type="button" class="btn btn-danger">Excluir</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												<!-- Optional: Place to the bottom of scripts -->
+												<script>
+													const myModal = new bootstrap.Modal(
+														document.getElementById("modalId"),
+														options,
+													);
+												</script>
+												
+												</td>
 								</tr>
 
 							<?php } ?>
 
-
-
-							<tr class="">
-								<td scope="row">R1C1</td>
-								<td>R1C2</td>
-								<td>R1C3</td>	
-								<td>R1C3</td>
-								<td>R1C3</td>
-								<td></td>
-							</tr>
-							<tr class="">
-								<td scope="row">Item</td>
-								<td>Item</td>
-								<td>Item</td>
-								<td>Item</td>
-								<td>Item</td>
-								<td></td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
