@@ -280,7 +280,7 @@
 														<div class="modal-content">
 															<div class="modal-header">
 																<h5 class="modal-title" id="modalTitleId">
-																	Excluir dados do cliente
+																	Excluir dados do cliente <?php echo $idclientes ?>
 																</h5>
 																<button
 																	type="button"
