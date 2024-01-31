@@ -20,20 +20,28 @@
 					<h1 class="h3 mb-3">Cadastro do Fornecedor</h1>
 
 					<div class="row">
-								<div class="col-6">
+								<div class="col-4">
 									<label for="cadastrofornecedor" class="form-label"></label>
 									<div class="input-group mb-3">
 										<span class="input-group-text" id="nomeempresa">Empresa</span>
 										<input type="text" class="form-control" placeholder="Digite o nome da empresa">
 									</div>
-								<div class="col-6">
+								</div>
+								<div class="col-4">
 									<label for="cadastrofornecedor" class="form-label"></label>
 									<div class="input-group mb-3">
 										<span class="input-group-text" id="nomeempresa">Razão social</span>
 										<input type="text" class="form-control" placeholder="Digite o nome da empresa">
 									</div>
 								</div>
-							</div>
+								<div class="col-4">
+									<label for="cadastrofornecedor" class="form-label"></label>
+									<div class="input-group mb-3">
+										<span class="input-group-text" id="nomeempresa">CNPJ</span>
+										<input type="text" class="form-control" placeholder="Digite o nome da empresa">
+									</div>
+					</div>
+								
 									<div class="row">
 									<div class="input-group mb-3 col-12">
 											<span class="input-group-text">Telefones para contato</span>
@@ -49,28 +57,28 @@
 								<label for="senha" class="form-label">Senha</label>
 								<input type="password" class="form-control" id="senha">
 							</div>
-							<div class="col-12">
+							<div class="col-12 mt-2">
 								<label for="endereco" class="form-label">Endereço</label>
 								<input type="text" class="form-control" id="endereco" placeholder="Avenida da universidade">
 							</div>
 							
-							<div class="col-md-6">
+							<div class="col-md-6 mt-2">
 								<label for="cidade" class="form-label">Cidade</label>
 								<input type="text" class="form-control" id="cidade">
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 mt-2">
 								<label for="estado" class="form-label">Estado</label>
 								<select id="estado" class="form-select">
 									<option selected>Escolha...</option>
 									<option>...</option>
 								</select>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-2 mt-2">
 								<label for="cep" class="form-label">CEP</label>
 								<input type="text" class="form-control" id="inputZip">
 							</div>
 							
-							<div class="col-12">
+							<div class="col-12 mt-2">
 								<button type="submit" class="btn btn-primary">Cadastrar</button>
 							</div>
 							
