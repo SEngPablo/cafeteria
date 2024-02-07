@@ -13,7 +13,7 @@ $complemento = $_POST['complemento'];
 $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $uf = $_POST['uf'];
-$arquivo = $_FILES['imagem'];
+$arquivo = $_FILES['imagem'];  
 
 
 if($arquivo !== null) {

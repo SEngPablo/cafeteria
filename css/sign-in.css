@@ -1,0 +1,18 @@
+.btn-custom{
+  background-color: var(--bs-warning-text-emphasis);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--bs-danger-text-emphasis);
+  color: #fff;
+}
+
+.sombra {
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.line-separator{
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
