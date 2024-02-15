@@ -151,8 +151,7 @@
 								class="form-control"
 								name="imagem"
 								id="imagem"
-								placeholder="Insira sua imagem"
-							/>
+								placeholder="Insira sua imagem"/>
 						</div>
 						<button	type="submit" class="btn btn-primary ">Enviar</button>	
 				</div>
@@ -205,6 +204,7 @@
 													class="btn btn-warning btn-lg"
 													data-bs-toggle="modal"
 													data-bs-target="#modaleditar"
+													data-id="<?php echo $id ?>"
 												>
 												<i class="fa-solid fa-file-pen"></i>												</button>
 												
@@ -223,35 +223,170 @@
 												>
 													<div
 														class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-														role="document"
-													>
+														role="document"													>
 														<div class="modal-content">
 															<div class="modal-header">
 																<h5 class="modal-title" id="modalTitleId">
+																	Editar cliente 
 																	 <?php echo $idclientes ?>
 																</h5>
 																<button
 																	type="button"
 																	class="btn-close"
 																	data-bs-dismiss="modal"
-																	aria-label="Close"
-																></button>
+																	aria-label="Close"></button>
 															</div>
-															<div class="modal-body">Body</div>
-															<div class="modal-footer">
-																<button
-																	type="button"
-																	class="btn btn-secondary"
-																	data-bs-dismiss="modal"
-																>
-																	Voltar
-																</button>
-																<button type="button" class="btn btn-primary">Salvar</button>
-															</div>
-														</div>
-													</div>
-												</div>
+
+															<div class="modal-body">
+																<form action="atualizarcliente.php" method="POST">
+																<div class="container-fluid p-0">
+
+					<h3 class="h3 mb-3">Cadastro do cliente</h3>
+
+					<div class="row">
+						<div class="mb-3 col-12">
+							<label for="nome" class="form-label">Nome</label>
+							<input
+								type="text"
+								class="form-control"
+								name="nome"
+								id="nome"
+								placeholder="Digite o nome do cliente"/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="email" class="form-label">Email</label>
+							<input
+								type="email"
+								class="form-control"
+								name="email"
+								id="email"
+								placeholder="Digite o e-mail no formato abc@mail.com"/>
+						
+						</div>
+						
+						
+					</div>
+
+					<div class="row">
+						<div class="mb-3 col-12">
+							<label for="telefone" class="form-label">Telefone</label>
+							<input
+								type="text"
+								class="form-control"
+								name="telefone"
+								id="telefone"
+								placeholder="(99) 9 8800-8008"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="cpfcnpj" class="form-label">CPF/CNPJ</label>
+							<input
+								type="text"
+								class="form-control"
+								name="cpfcnpj"
+								id="cpfcnpj"
+								placeholder="Insira somente números"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="cep" class="form-label">CEP</label>
+							<input
+								type="text"
+								class="form-control"
+								name="cep"
+								id="cep"
+								maxlength="8"
+								onkeyup="viaCEP()"
+								placeholder="Insira somente números"
+							/>
+						</div>
+
+					<div class="row">
+						<div class="mb-3 col-12">
+							<label for="logradouro" class="form-label">Logradouro</label>
+							<input
+								type="text"
+								class="form-control"
+								name="logradouro"
+								id="logradouro"
+								placeholder="Insira o logradouro"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="numero" class="form-label">Nº</label>
+							<input
+								type="text"
+								class="form-control"
+								name="numero"
+								id="numero"
+								placeholder="Insira o Nº"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="complemento" class="form-label">Complemento</label>
+							<input
+								type="text"
+								class="form-control"
+								name="complemento"
+								id="complemento"
+								placeholder="Insira o complemento"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="bairro" class="form-label">Bairro</label>
+							<input
+								type="text"
+								class="form-control"
+								name="bairro"
+								id="bairro"
+								placeholder="Insira o bairro"
+							/>
+						</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="mb-3 col-12">
+							<label for="cidade" class="form-label">Cidade</label>
+							<input
+								type="text"
+								class="form-control"
+								name="cidade"
+								id="cidade"
+								placeholder="Insira o logradouro"
+							/>
+						</div>
+						<div class="mb-3 col-12">
+							<label for="uf" class="form-label">Estado</label>
+							<input
+								type="text"
+								class="form-control"
+								name="uf"
+								id="uf"
+								placeholder="Insira o Estado"
+							/>
+						</div>
+						
+					</div>
+					<div class="modal-footer">
+						<button
+						type="button"
+						class="btn btn-secondary"
+						data-bs-dismiss="modal"
+						>
+						Voltar
+					</button>
+					<button type="button" class="btn btn-primary">Salvar</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
 												
+
+
 												<!-- Modal trigger button -->
 												<button
 													type="button"
@@ -259,7 +394,7 @@
 													data-bs-toggle="modal"
 													data-bs-target="#modalexcluir"
 												>
-												<i class="fa-solid fa-trash-can"></i>													</button>
+												<i class="fa-solid fa-trash-can"></i></button>
 												
 												<!-- Modal Body -->
 												<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
@@ -272,8 +407,7 @@
 													
 													role="dialog"
 													aria-labelledby="modalTitleId"
-													aria-hidden="true"
-												>
+													aria-hidden="true">
 													<div
 														class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
 														role="document">
@@ -294,8 +428,7 @@
 																<button
 																	type="button"
 																	class="btn btn-secondary"
-																	data-bs-dismiss="modal"
-																>
+																	data-bs-dismiss="modal">
 																	Voltar
 																</button>
 																<button type="button" class="btn btn-danger">Excluir</button>
@@ -319,8 +452,7 @@
 
 						</tbody>
 					</table>
-				</div>
-				
+				</div>				
 			</div>
 
 
