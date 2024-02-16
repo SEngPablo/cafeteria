@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$produto = $_POST['produto'];
+$nome = $_POST['produto'];
 $descricao = $_POST['descricao'];
 $preco = $_POST['preco'];
 $categoria = $_POST['categoria'];

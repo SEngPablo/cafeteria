@@ -363,8 +363,7 @@
 								class="form-control"
 								name="uf"
 								id="uf"
-								placeholder="Insira o Estado"
-							/>
+								placeholder="Insira o Estado"							/>
 						</div>
 						
 					</div>
@@ -372,8 +371,7 @@
 						<button
 						type="button"
 						class="btn btn-secondary"
-						data-bs-dismiss="modal"
-						>
+						data-bs-dismiss="modal">
 						Voltar
 					</button>
 					<button type="button" class="btn btn-primary">Salvar</button>

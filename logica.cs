@@ -66,3 +66,13 @@ namespace HelloWorld {
 
     }
 }
+
+
+
+aplicacao pede entrada 1 valor
+usuario digita 1 valor
+aplicacao pede entrada 2 valor
+usuario digita 2 valor
+aplicacao faz a operação e exibe resultado na tela
+usuario pressiona enter, aplicacao retorna ao menu
+
